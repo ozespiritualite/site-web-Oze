@@ -151,4 +151,65 @@ nav ul li a:hover {
   font-size: 15px;
   color: var(--texte-clair);
   line-height: 1.9;
+}/* ===== PRESTATIONS ===== */
+.prestations {
+  padding: 100px 120px;
+  background-color: var(--creme);
+  text-align: center;
+}
+
+.prestations .section-label {
+  margin-bottom: 15px;
+}
+
+.prestations h2 {
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--texte);
+  margin-bottom: 60px;
+}
+
+.cartes {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.carte {
+  background-color: var(--blanc);
+  padding: 50px 40px;
+  flex: 1;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.carte-numero {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--bleu);
+}
+
+.carte h3 {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--texte);
+}
+
+.carte p {
+  font-size: 14px;
+  color: var(--texte-clair);
+  line-height: 1.8;
+  flex: 1;
+}
+
+.carte-prix {
+  font-size: 13px;
+  color: var(--bleu) !important;
+  letter-spacing: 1px;
+  flex: 0 !important;
 }
