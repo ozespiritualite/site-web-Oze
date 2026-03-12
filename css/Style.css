@@ -162,12 +162,13 @@ nav ul li a:hover {
   margin-bottom: 15px;
 }
 
-.prestations h2 {
+.prestations h2,
+.prestations h1 {
   font-size: 36px;
   font-weight: 400;
   font-style: italic;
   color: var(--texte);
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .cartes {
@@ -401,4 +402,21 @@ footer {
   font-size: 11px;
   letter-spacing: 2px;
   opacity: 0.4;
+}/* ===== BOUTONS ===== */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid var(--bleu);
+  color: var(--bleu);
+  padding: 14px 40px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--bleu);
+  color: var(--creme);
 }
