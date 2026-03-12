@@ -451,4 +451,74 @@ footer {
   #nav-menu.ouvert {
     display: flex;
   }
+  
+  /* HERO */
+  .hero {
+    padding: 40px 30px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  /* À PROPOS */
+  .apropos {
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 40px;
+  }
+
+  .apropos-image img {
+    width: 100%;
+    height: 350px;
+  }
+
+  /* PRESTATIONS */
+  .prestations {
+    padding: 60px 30px;
+  }
+
+  .cartes {
+    flex-direction: column;
+  }
+
+  .carte {
+    max-width: 100%;
+  }
+
+  /* ACCOMPAGNEMENT */
+  .accompagnement {
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 40px;
+  }
+
+  .accompagnement-image img {
+    width: 100%;
+    height: 350px;
+  }
+
+  /* AVIS */
+  .avis {
+    padding: 60px 30px;
+  }
+
+  .avis-grille {
+    flex-direction: column;
+  }
+
+  .avis-carte {
+    max-width: 100%;
+  }
+
+  /* FOOTER */
+  .footer-contenu {
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 40px;
+  }
+
+  .footer-bas {
+    padding: 25px 30px;
+  }
 }
