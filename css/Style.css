@@ -339,4 +339,66 @@ nav ul li a:hover {
 .calendly-container {
   max-width: 900px;
   margin: 0 auto;
+}/* ===== FOOTER ===== */
+footer {
+  background-color: var(--texte);
+}
+
+.footer-contenu {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 120px;
+  gap: 60px;
+}
+
+.footer-logo .logo {
+  font-size: 32px;
+  font-style: italic;
+  color: var(--bleu);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  color: var(--creme);
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+.footer-liens ul,
+.footer-contact ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-liens a,
+.footer-contact a {
+  text-decoration: none;
+  color: var(--creme);
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-liens a:hover,
+.footer-contact a:hover {
+  opacity: 1;
+}
+
+.footer-bas {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 25px 120px;
+  text-align: center;
+}
+
+.footer-bas p {
+  color: var(--creme);
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: 0.4;
 }
