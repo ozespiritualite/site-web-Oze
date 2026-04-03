@@ -17,7 +17,7 @@
             <a href="numerologie.html">Prestations</a>
             <ul class="sous-menu">
               <li><a href="numerologie.html">Numérologie</a></li>
-              <li><a href="soins.html">Soins énergétiques</a></li>
+              <li><a href="coming-soon.html">Soins énergétiques</a></li>
               <li><a href="coming-soon.html">Hypnose Transpersonnelle</a></li>
             </ul>
           </li>
@@ -31,38 +31,39 @@
     <main>
       <section class="contact">
         <p class="section-label">Contact & RDV</p>
-        <h1>Réservez votre séance</h1>
-        <p class="contact-intro">
-          Chaque parcours est unique. Dites-moi où vous en êtes —
-          je vous recontacte sous 48h pour convenir d'un créneau.
-        </p>
+        <h1>Pour toute demande de rendez-vous ou d'informations,<br>merci de remplir le formulaire suivant :</h1>
 
         <form action="https://formsubmit.co/contact@oze-spirituality.com" method="POST" class="contact-form">
 
           <div class="form-row">
             <div class="form-group">
               <label for="prenom">Prénom *</label>
-              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+              <input type="text" id="prenom" name="prenom" required />
             </div>
             <div class="form-group">
               <label for="nom">Nom *</label>
-              <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+              <input type="text" id="nom" name="nom" required />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="email">Email *</label>
-              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="form-group">
               <label for="telephone">Téléphone</label>
-              <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" />
+              <input type="tel" id="telephone" name="telephone" />
             </div>
           </div>
 
           <div class="form-group">
-            <label for="naissance">Date de naissance <span class="form-hint">(utile pour la numérologie)</span></label>
+            <label for="adresse">Adresse postale *</label>
+            <input type="text" id="adresse" name="adresse" />
+          </div>
+
+          <div class="form-group">
+            <label for="naissance">Date de naissance * <span class="form-hint">(utile pour la numérologie)</span></label>
             <input type="date" id="naissance" name="date_naissance" />
           </div>
 
@@ -83,10 +84,11 @@
 
           <div class="form-group">
             <label for="message">Votre message *</label>
-            <textarea id="message" name="message" rows="5" placeholder="Partagez ce qui vous amène, vos intentions, vos questions..." required></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
           </div>
 
-          <p class="form-mentions">* Champs obligatoires — vos données sont utilisées uniquement pour vous recontacter.</p>
+          <p class="form-mentions">* Champs obligatoires</p>
+
 
           <!-- FormSubmit config -->
           <input type="hidden" name="_subject" value="Nouvelle demande depuis oze-spirituality" />
