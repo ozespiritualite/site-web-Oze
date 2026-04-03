@@ -5,6 +5,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soins énergétiques — Ôze</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* ===== SOINS — HERO ===== */
+      .soins-hero {
+        background-color: var(--bleu);
+        padding: 90px 60px 100px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .soins-hero .section-label {
+        color: var(--creme);
+        opacity: 0.75;
+      }
+
+      .soins-hero h1 {
+        font-size: 58px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--blanc);
+        max-width: 720px;
+        line-height: 1.25;
+      }
+
+      .soins-hero p {
+        font-size: 16px;
+        color: var(--creme);
+        max-width: 540px;
+        line-height: 1.9;
+        opacity: 0.9;
+      }
+
+      .btn-clair {
+        border-color: var(--creme);
+        color: var(--creme);
+      }
+
+      .btn-clair:hover {
+        background-color: var(--creme);
+        color: var(--bleu);
+      }
+
+      /* ===== BÉNÉFICES ===== */
+      .soins-benefices {
+        background-color: var(--creme);
+        padding: 100px 80px;
+        text-align: center;
+      }
+
+      .soins-benefices .section-label {
+        margin-bottom: 14px;
+      }
+
+      .soins-benefices h2 {
+        font-size: 38px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--texte);
+        margin-bottom: 70px;
+      }
+
+      .benefices-grille {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .benefice-carte {
+        background-color: var(--blanc);
+        border-radius: 14px;
+        padding: 48px 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+        transition: transform 0.3s ease;
+      }
+
+      .benefice-carte:hover {
+        transform: translateY(-4px);
+      }
+
+      .benefice-icone {
+        font-size: 34px;
+      }
+
+      .benefice-carte h3 {
+        font-size: 18px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--texte);
+      }
+
+      .benefice-carte p {
+        font-size: 14px;
+        color: var(--texte-clair);
+        line-height: 1.85;
+      }
+
+      /* ===== DÉROULEMENT ===== */
+      .soins-deroulement {
+        background-color: var(--blanc);
+        padding: 100px 80px;
+        text-align: center;
+      }
+
+      .soins-deroulement .section-label {
+        margin-bottom: 14px;
+      }
+
+      .soins-deroulement h2 {
+        font-size: 38px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--texte);
+        margin-bottom: 70px;
+      }
+
+      .etapes {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .etape {
+        display: flex;
+        gap: 36px;
+        align-items: flex-start;
+        padding: 36px 0;
+        border-bottom: 1px solid rgba(123, 163, 184, 0.25);
+      }
+
+      .etape:last-child {
+        border-bottom: none;
+      }
+
+      .etape-num {
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--bleu);
+        text-transform: uppercase;
+        min-width: 28px;
+        padding-top: 4px;
+      }
+
+      .etape-contenu h3 {
+        font-size: 19px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--texte);
+        margin-bottom: 10px;
+      }
+
+      .etape-contenu p {
+        font-size: 14px;
+        color: var(--texte-clair);
+        line-height: 1.85;
+      }
+
+      /* ===== FAQ ===== */
+      .soins-faq {
+        background-color: var(--creme);
+        padding: 100px 80px;
+        text-align: center;
+      }
+
+      .soins-faq .section-label {
+        margin-bottom: 14px;
+      }
+
+      .soins-faq h2 {
+        font-size: 38px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--texte);
+        margin-bottom: 60px;
+      }
+
+      .faq-liste {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid rgba(123, 163, 184, 0.4);
+      }
+
+      .faq-item:first-child {
+        border-top: 1px solid rgba(123, 163, 184, 0.4);
+      }
+
+      .faq-item summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-style: italic;
+        color: var(--texte);
+        user-select: none;
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item summary::after {
+        content: '+';
+        font-size: 22px;
+        font-style: normal;
+        color: var(--bleu);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 20px;
+      }
+
+      .faq-item[open] summary::after {
+        transform: rotate(45deg);
+      }
+
+      .faq-item p {
+        font-size: 14px;
+        color: var(--texte-clair);
+        line-height: 1.9;
+        padding-bottom: 24px;
+        max-width: 620px;
+      }
+
+      /* ===== TARIF + CTA ===== */
+      .soins-tarif {
+        background-color: var(--bleu);
+        padding: 100px 60px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .soins-tarif .section-label {
+        color: var(--creme);
+        opacity: 0.75;
+      }
+
+      .soins-tarif h2 {
+        font-size: 44px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--blanc);
+      }
+
+      .soins-tarif p {
+        font-size: 15px;
+        color: var(--creme);
+        max-width: 480px;
+        line-height: 1.9;
+        opacity: 0.9;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 1024px) {
+        .benefices-grille {
+          grid-template-columns: 1fr;
+          max-width: 480px;
+        }
+
+        .soins-hero h1 {
+          font-size: 38px;
+        }
+
+        .soins-benefices,
+        .soins-deroulement,
+        .soins-faq {
+          padding: 70px 30px;
+        }
+
+        .soins-hero,
+        .soins-tarif {
+          padding: 70px 30px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,9 +312,10 @@
             <ul class="sous-menu">
               <li><a href="numerologie.html">Numérologie</a></li>
               <li><a href="soins.html">Soins énergétiques</a></li>
+              <li><a href="coming-soon.html">Hypnose Transpersonnelle</a></li>
             </ul>
           </li>
-          <li><a href="accompagnement.html">Accompagnement 3 mois</a></li>
+          <li><a href="coming-soon.html">Accompagnement 3 mois</a></li>
           <li><a href="avis.html">Avis</a></li>
           <li><a href="contact.html">Contact & RDV</a></li>
         </ul>
@@ -28,96 +323,175 @@
     </header>
 
     <main>
-      <!-- INTRO SOINS -->
-      <section class="prestation-intro">
+
+      <!-- HERO -->
+      <section class="soins-hero">
         <p class="section-label">Soins énergétiques</p>
-        <h1>Qu'est-ce qu'un soin énergétique ?</h1>
-        <p class="prestation-description">
-          Un soin énergétique est un accompagnement holistique qui vise 
-          à rééquilibrer la circulation de l'énergie dans vos corps 
-          subtils. En libérant les blocages accumulés, le soin permet 
-          de retrouver fluidité, légèreté et harmonie intérieure.
+        <h1>Libérez vos blocages.<br>Retrouvez votre fluidité.</h1>
+        <p>
+          Fatigue inexpliquée, émotions enkystées, sentiment de stagnation —
+          le soin énergétique agit en profondeur sur vos corps subtils
+          pour restaurer l'équilibre et la légèreté.
         </p>
+        <a href="contact.html" class="btn btn-clair">Réserver un soin</a>
       </section>
 
-      <!-- FAQ SOINS -->
-      <section class="soins-faq">
-        <div class="faq-grille">
+      <!-- BÉNÉFICES -->
+      <section class="soins-benefices">
+        <p class="section-label">Ce que ça vous apporte</p>
+        <h2>Pourquoi un soin énergétique ?</h2>
+        <div class="benefices-grille">
 
-          <div class="faq-carte">
-            <h3>À quoi ça sert ?</h3>
-            <p>Le soin énergétique aide à libérer les tensions 
-            émotionnelles, les mémoires bloquées et les déséquilibres 
-            qui se manifestent dans votre quotidien — fatigue, stress, 
-            douleurs inexpliquées, sentiment de stagnation. Il favorise 
-            un retour à l'équilibre profond.</p>
+          <div class="benefice-carte">
+            <span class="benefice-icone">🌊</span>
+            <h3>Libération</h3>
+            <p>Tensions émotionnelles, mémoires bloquées, schémas répétitifs —
+            le soin travaille à dissoudre ce qui entrave votre élan naturel.</p>
           </div>
 
-          <div class="faq-carte">
-            <h3>Déroulement de la séance</h3>
-            <p>La séance dure environ 1h. Elle débute par un échange 
-            pour comprendre vos besoins, suivi du soin à proprement 
-            parler où je travaille sur vos centres énergétiques. 
-            Un temps de retour et de partage clôture la séance.</p>
+          <div class="benefice-carte">
+            <span class="benefice-icone">✦</span>
+            <h3>Équilibre</h3>
+            <p>Vos centres énergétiques retrouvent leur harmonie. Le corps,
+            l'émotionnel et le mental s'alignent pour une vie plus fluide.</p>
           </div>
 
-          <div class="faq-carte">
-            <h3>Aussi efficace à distance qu'en présentiel ?</h3>
-            <p>Oui. L'énergie n'a pas de limite spatiale. Un soin 
-            à distance est tout aussi puissant qu'en présentiel. 
-            De nombreux témoignages confirment l'intensité des ressentis, 
-            même à des milliers de kilomètres.</p>
-          </div>
-
-          <div class="faq-carte">
-            <h3>À quel prix ?</h3>
-            <p>Les soins énergétiques sont proposés à partir de 60€. 
-            Le tarif peut varier selon la durée et la nature du soin. 
-            N'hésitez pas à me contacter pour en discuter.</p>
-            <a href="contact.html" class="btn">Me contacter</a>
+          <div class="benefice-carte">
+            <span class="benefice-icone">🌿</span>
+            <h3>Légèreté</h3>
+            <p>Après un soin, beaucoup ressentent un apaisement profond,
+            une clarté retrouvée et une connexion renouvelée à eux-mêmes.</p>
           </div>
 
         </div>
       </section>
+
+      <!-- DÉROULEMENT -->
+      <section class="soins-deroulement">
+        <p class="section-label">Comment ça se passe</p>
+        <h2>Une séance en 4 temps</h2>
+        <div class="etapes">
+
+          <div class="etape">
+            <span class="etape-num">01</span>
+            <div class="etape-contenu">
+              <h3>L'intention</h3>
+              <p>Avant la séance, vous me partagez ce que vous traversez —
+              par message ou à l'oral. Ce premier échange pose l'intention
+              du soin et me permet de me préparer à votre énergie.</p>
+            </div>
+          </div>
+
+          <div class="etape">
+            <span class="etape-num">02</span>
+            <div class="etape-contenu">
+              <h3>Le soin à distance</h3>
+              <p>Vous vous installez confortablement chez vous, au calme.
+              Je travaille alors sur vos corps subtils, vos chakras et
+              vos mémoires énergétiques. La séance dure environ 45 minutes.</p>
+            </div>
+          </div>
+
+          <div class="etape">
+            <span class="etape-num">03</span>
+            <div class="etape-contenu">
+              <h3>Le retour</h3>
+              <p>Après le soin, je vous envoie un compte-rendu détaillé :
+              ce que j'ai perçu, travaillé, libéré. Vous recevez aussi
+              des conseils pour intégrer le soin dans les jours qui suivent.</p>
+            </div>
+          </div>
+
+          <div class="etape">
+            <span class="etape-num">04</span>
+            <div class="etape-contenu">
+              <h3>L'intégration</h3>
+              <p>Les effets d'un soin se déploient souvent sur 3 à 7 jours.
+              Hydratation, repos, douceur envers soi — je vous guide
+              pour traverser cette période avec bienveillance.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="soins-faq">
+        <p class="section-label">Vos questions</p>
+        <h2>Ce qu'on me demande souvent</h2>
+        <div class="faq-liste">
+
+          <details class="faq-item">
+            <summary>Est-ce aussi efficace à distance qu'en présentiel ?</summary>
+            <p>Oui. L'énergie n'a pas de limite géographique. Un soin à distance
+            est tout aussi puissant qu'en cabinet. De nombreux témoignages
+            décrivent des ressentis intenses, même à des milliers de kilomètres.
+            Ce qui compte, c'est l'intention et la connexion.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Pour qui est-ce adapté ?</summary>
+            <p>Le soin énergétique s'adresse à toute personne qui traverse
+            une période de fatigue, de stress, de deuil, de transition ou
+            simplement qui souhaite se reconnecter à elle-même. Aucun prérequis
+            spirituel n'est nécessaire.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Combien de séances faut-il ?</summary>
+            <p>Une seule séance peut déjà produire des effets visibles.
+            Pour un travail plus profond sur des blocages anciens, un
+            accompagnement de 3 à 6 séances est souvent recommandé,
+            à espacer de 2 à 4 semaines.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Peut-on cumuler avec un suivi médical ?</summary>
+            <p>Absolument. Le soin énergétique est complémentaire à la médecine
+            conventionnelle, il ne s'y substitue pas. Il agit sur les dimensions
+            subtiles pour soutenir le corps dans son processus naturel.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Comment se préparer à la séance ?</summary>
+            <p>Prévoyez un moment calme d'environ 1h. Installez-vous
+            confortablement — allongé de préférence — dans un endroit où
+            vous ne serez pas dérangé. Avoir un carnet à portée peut être
+            utile pour noter vos ressentis après.</p>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- TARIF + CTA -->
+      <section class="soins-tarif">
+        <p class="section-label">Tarif</p>
+        <h2>À partir de 60€</h2>
+        <p>
+          Séances 100% à distance, par téléphone ou visio.
+          Compte-rendu écrit inclus. Réponse sous 48h.
+        </p>
+        <a href="contact.html" class="btn btn-clair">Réserver maintenant</a>
+      </section>
+
     </main>
 
     <footer>
       <div class="footer-contenu">
-        <div class="footer-logo">
-          <p class="logo">Ôze</p>
-          <p>Oser être son âme</p>
-          <p class="footer-horaires">Du lundi au vendredi</p>
+        <div class="footer-col">
+          <span class="footer-emoji">📅</span>
+          <p>Du lundi au vendredi</p>
         </div>
-        <div class="footer-liens">
-          <p class="section-label">Navigation</p>
-          <ul>
-            <li><a href="apropos.html">À propos</a></li>
-            <li><a href="numerologie.html">Numérologie</a></li>
-            <li><a href="soins.html">Soins énergétiques</a></li>
-            <li><a href="accompagnement.html">Accompagnement</a></li>
-            <li><a href="avis.html">Avis</a></li>
-            <li><a href="contact.html">Contact & RDV</a></li>
-          </ul>
+        <div class="footer-col footer-col-center">
+          <a href="index.html"><img src="images/Logo-Ôze.jpg" alt="Ôze" class="footer-logo-img" /></a>
+          <p>oze.spirituality</p>
         </div>
-        <div class="footer-contact">
-          <p class="section-label">Retrouvez-moi</p>
-          <ul>
-            <li><a href="https://www.instagram.com/oze.spirituality" target="_blank">@oze.spirituality</a></li>
-            <li><a href="mailto:contact@oze-spirituality.com">contact@oze-spirituality.com</a></li>
-          </ul>
+        <div class="footer-col">
+          <a href="mentions-legales.html"><img src="images/Logo-Ôze.jpg" alt="Ôze" class="footer-logo-img" /></a>
+          <p><a href="mentions-legales.html">Mentions légales</a> / <a href="cgv.html">CGV</a></p>
         </div>
-      </div>
-      <div class="footer-bas">
-        <p>© 2025 Ôze — Tous droits réservés · <a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a></p>
       </div>
     </footer>
-
-    <script>
-      const burger = document.getElementById('burger');
-      const navMenu = document.getElementById('nav-menu');
-      burger.addEventListener('click', function() {
-        navMenu.classList.toggle('ouvert');
-      });
-    </script>
+    <script src="js/nav.js"></script>
   </body>
 </html>
