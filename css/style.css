@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* ===== VARIABLES ===== */
 :root {
   --creme: #EFE9DF;
@@ -12,18 +13,22 @@
   --texte: #3D3532;
   --texte-clair: #6B6460;
   --blanc: #FFFFFF;
-}/* ===== BODY ===== */
+}
+
+/* ===== BODY ===== */
 body {
   background-color: var(--creme);
   color: var(--texte);
   font-family: 'Georgia', serif;
   font-size: 16px;
   line-height: 1.6;
+}
+
 /* ===== NAVBAR ===== */
 header {
-  background-color: var(--creme);
+  background-color: var(--bleu);
   padding: 20px 60px;
-  border-bottom: 1px solid var(--bleu);
+  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -36,16 +41,16 @@ nav {
 }
 
 .logo img {
-  height: 80px;
+  height: 90px;
   width: auto;
   border-radius: 50%;
-  border: 1px solid var(--texte);
+  border: 2px solid var(--creme);
 }
 
 nav > ul {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 15px;
   list-style: none;
 }
 
@@ -53,16 +58,34 @@ nav ul li {
   position: relative;
 }
 
-nav ul li a {
+nav > ul > li > a {
   text-decoration: none;
   color: var(--texte);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  background-color: var(--creme);
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: var(--bleu);
+nav > ul > li > a:hover {
+  background-color: var(--blanc);
+  color: var(--bleu-fonce);
+}
+
+/* Liens sous-menu (pas de carte) */
+.sous-menu li a {
+  background-color: transparent !important;
+  padding: 5px 0 !important;
+  border-radius: 0 !important;
+  color: var(--texte) !important;
+}
+
+.sous-menu li a:hover {
+  color: var(--bleu) !important;
+  background-color: transparent !important;
 }
 
 /* Sous-menu caché par défaut */
@@ -78,13 +101,16 @@ nav ul li a:hover {
   gap: 12px;
   min-width: 220px;
   z-index: 200;
+  border-radius: 8px;
+  margin-top: 8px;
 }
 
 /* Apparaît au survol */
 .dropdown:hover .sous-menu {
   display: flex;
 }
-}/* ===== HERO ===== */
+
+/* ===== HERO ===== */
 .hero {
   min-height: 60vh;
   display: flex;
@@ -96,24 +122,34 @@ nav ul li a:hover {
 }
 
 .hero-accroche {
-  font-size: 14px;
-  letter-spacing: 3px;
+  font-size: 16px;
+  letter-spacing: 4px;
   color: var(--bleu);
   text-transform: uppercase;
   margin-bottom: 30px;
 }
 
 .hero h1 {
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 400;
   color: var(--texte);
   font-style: italic;
   margin-bottom: 30px;
-  max-width: 700px
-}/* ===== À PROPOS ===== */
+  max-width: 700px;
+}
+
+.hero-texte {
+  font-size: 15px;
+  color: var(--texte-clair);
+  max-width: 550px;
+  line-height: 1.9;
+}
+
+/* ===== À PROPOS ===== */
 .apropos {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 80px;
   padding: 100px 120px;
   background-color: var(--blanc);
@@ -139,7 +175,8 @@ nav ul li a:hover {
   color: var(--bleu);
 }
 
-.apropos-texte h2 {
+.apropos-texte h2,
+.apropos-texte h1 {
   font-size: 36px;
   font-weight: 400;
   font-style: italic;
@@ -151,7 +188,86 @@ nav ul li a:hover {
   font-size: 15px;
   color: var(--texte-clair);
   line-height: 1.9;
-}/* ===== PRESTATIONS ===== */
+}
+
+/* ===== À PROPOS — PAGE DÉDIÉE ===== */
+.apropos-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px 120px;
+  background-color: var(--creme);
+}
+
+.apropos-hero-image img {
+  width: 380px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.apropos-citation-carte {
+  background-color: var(--bleu);
+  padding: 50px 45px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.apropos-citation {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--blanc);
+  line-height: 1.8;
+}
+
+.apropos-citation-auteur {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--creme);
+  opacity: 0.8;
+}
+
+.apropos-bio {
+  padding: 100px 120px;
+  background-color: var(--blanc);
+  text-align: center;
+}
+
+.apropos-bio h1 {
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--texte);
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.apropos-bio-texte {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apropos-bio-texte p {
+  font-size: 15px;
+  color: var(--texte-clair);
+  line-height: 1.9;
+}
+
+.apropos-bio-texte .btn {
+  align-self: flex-start;
+}
+
+/* ===== PRESTATIONS ===== */
 .prestations {
   padding: 100px 120px;
   background-color: var(--creme);
@@ -175,48 +291,126 @@ nav ul li a:hover {
   display: flex;
   gap: 30px;
   justify-content: center;
+  padding-left: 40px;
+}
+
+.cartes-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 0;
 }
 
 .carte {
-  background-color: var(--blanc);
-  padding: 50px 40px;
+  background-color: var(--bleu);
+  padding: 55px 45px;
   flex: 1;
-  max-width: 340px;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .carte-numero {
   font-size: 11px;
   letter-spacing: 3px;
-  color: var(--bleu);
+  color: var(--creme);
+  opacity: 0.7;
 }
 
 .carte h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   font-style: italic;
-  color: var(--texte);
+  color: var(--blanc);
 }
 
 .carte p {
-  font-size: 14px;
-  color: var(--texte-clair);
+  font-size: 15px;
+  color: var(--creme);
   line-height: 1.8;
   flex: 1;
 }
 
 .carte-prix {
   font-size: 13px;
-  color: var(--bleu) !important;
+  color: var(--blanc) !important;
   letter-spacing: 1px;
   flex: 0 !important;
-}/* ===== ACCOMPAGNEMENT ===== */
+}
+
+.carte .btn {
+  border-color: var(--creme);
+  color: var(--creme);
+}
+
+.carte .btn:hover {
+  background-color: var(--creme);
+  color: var(--bleu);
+}
+
+/* ===== PRESTATION INTRO (pages dédiées) ===== */
+.prestation-intro {
+  padding: 80px 120px 60px 120px;
+  background-color: var(--blanc);
+  text-align: center;
+}
+
+.prestation-intro h1 {
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--texte);
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.prestation-description {
+  font-size: 15px;
+  color: var(--texte-clair);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+/* ===== PRESTATION FAQ (soins.html) ===== */
+.prestation-faq {
+  padding: 60px 120px 100px 120px;
+  background-color: var(--blanc);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--bleu);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h2 {
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--texte);
+  margin-bottom: 20px;
+}
+
+.faq-item p {
+  font-size: 15px;
+  color: var(--texte-clair);
+  line-height: 1.9;
+}
+
+/* ===== ACCOMPAGNEMENT ===== */
 .accompagnement {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 80px;
   padding: 100px 120px;
   background-color: var(--blanc);
@@ -229,7 +423,8 @@ nav ul li a:hover {
   gap: 20px;
 }
 
-.accompagnement-texte h2 {
+.accompagnement-texte h2,
+.accompagnement-texte h1 {
   font-size: 36px;
   font-weight: 400;
   font-style: italic;
@@ -241,6 +436,10 @@ nav ul li a:hover {
   font-size: 15px;
   color: var(--texte-clair);
   line-height: 1.9;
+}
+
+.accompagnement-texte .carte-prix {
+  color: var(--bleu) !important;
 }
 
 .accompagnement-liste {
@@ -261,7 +460,9 @@ nav ul li a:hover {
   height: 500px;
   object-fit: cover;
   object-position: top;
-}/* ===== AVIS ===== */
+}
+
+/* ===== AVIS ===== */
 .avis {
   padding: 100px 120px;
   background-color: var(--creme);
@@ -272,7 +473,8 @@ nav ul li a:hover {
   margin-bottom: 15px;
 }
 
-.avis h2 {
+.avis h2,
+.avis h1 {
   font-size: 36px;
   font-weight: 400;
   font-style: italic;
@@ -284,22 +486,31 @@ nav ul li a:hover {
   display: flex;
   gap: 30px;
   justify-content: center;
+  padding-left: 40px;
+}
+
+.avis-grille-large {
+  flex-wrap: wrap;
+  padding-left: 0;
 }
 
 .avis-carte {
-  background-color: var(--blanc);
-  padding: 40px;
+  background-color: var(--bleu);
+  padding: 45px 45px;
   flex: 1;
-  max-width: 340px;
+  max-width: 380px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .avis-texte {
-  font-size: 15px;
-  color: var(--texte-clair);
+  font-size: 16px;
+  color: var(--blanc);
   line-height: 1.9;
   font-style: italic;
   flex: 1;
@@ -308,11 +519,14 @@ nav ul li a:hover {
 .avis-auteur {
   font-size: 12px;
   letter-spacing: 2px;
-  color: var(--bleu);
+  color: var(--creme);
   text-transform: uppercase;
-}/* ===== CONTACT ===== */
+  opacity: 0.8;
+}
+
+/* ===== CONTACT ===== */
 .contact {
-  padding: 100px 120px;
+  padding: 80px 120px;
   background-color: var(--blanc);
   text-align: center;
 }
@@ -321,7 +535,8 @@ nav ul li a:hover {
   margin-bottom: 15px;
 }
 
-.contact h2 {
+.contact h2,
+.contact h1 {
   font-size: 36px;
   font-weight: 400;
   font-style: italic;
@@ -337,34 +552,123 @@ nav ul li a:hover {
   line-height: 1.9;
 }
 
-.calendly-container {
-  max-width: 900px;
+/* ===== FORMULAIRE CONTACT ===== */
+.contact-form {
+  max-width: 600px;
   margin: 0 auto;
-}/* ===== FOOTER ===== */
+  text-align: left;
+  background-color: var(--creme);
+  padding: 50px 45px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--texte);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  color: var(--texte);
+  background-color: var(--blanc);
+  border: 1px solid var(--bleu);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--bleu-fonce);
+  box-shadow: 0 0 0 3px rgba(123, 163, 184, 0.15);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237BA3B8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form .btn {
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
 footer {
-  background-color: var(--texte);
+  background-color: var(--bleu);
 }
 
 .footer-contenu {
   display: flex;
-  justify-content: space-between;
-  padding: 80px 120px;
-  gap: 60px;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px 120px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .footer-logo .logo {
-  font-size: 32px;
+  font-size: 28px;
   font-style: italic;
-  color: var(--bleu);
+  color: var(--blanc);
   letter-spacing: 3px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .footer-logo p {
   color: var(--creme);
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
-  opacity: 0.6;
+  opacity: 0.8;
+}
+
+.footer-horaires {
+  margin-top: 10px;
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+  opacity: 0.6 !important;
+}
+
+.footer-liens .section-label,
+.footer-contact .section-label {
+  color: var(--blanc);
+  font-size: 10px;
 }
 
 .footer-liens ul,
@@ -372,17 +676,17 @@ footer {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .footer-liens a,
 .footer-contact a {
   text-decoration: none;
   color: var(--creme);
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 1px;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
@@ -392,17 +696,30 @@ footer {
 }
 
 .footer-bas {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 25px 120px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 15px 120px;
   text-align: center;
 }
 
 .footer-bas p {
   color: var(--creme);
-  font-size: 11px;
-  letter-spacing: 2px;
-  opacity: 0.4;
-}/* ===== BOUTONS ===== */
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  opacity: 0.5;
+}
+
+.footer-bas a {
+  color: var(--creme);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-bas a:hover {
+  opacity: 1;
+}
+
+/* ===== BOUTONS ===== */
 .btn {
   text-decoration: none;
   display: inline-block;
@@ -414,20 +731,23 @@ footer {
   letter-spacing: 3px;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  margin-top: 70px;
+  margin-top: 20px;
+  border-radius: 8px;
 }
 
 .btn:hover {
   background-color: var(--bleu);
   color: var(--creme);
-}/* ===== BURGER ===== */
+}
+
+/* ===== BURGER ===== */
 .burger {
   display: none;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: var(--texte);
+  color: var(--creme);
 }
 
 @media (max-width: 768px) {
@@ -442,16 +762,21 @@ footer {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--creme);
-    border-top: 1px solid var(--bleu);
+    background-color: var(--bleu);
+    border-top: 1px solid rgba(255,255,255,0.2);
     padding: 20px 40px;
-    gap: 20px;
+    gap: 15px;
   }
 
   #nav-menu.ouvert {
     display: flex;
   }
-  
+
+  nav > ul > li > a {
+    font-size: 11px;
+    padding: 10px 15px;
+  }
+
   /* HERO */
   .hero {
     padding: 40px 30px;
@@ -473,6 +798,30 @@ footer {
     height: 350px;
   }
 
+  /* À PROPOS — PAGE DÉDIÉE */
+  .apropos-hero {
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 40px;
+  }
+
+  .apropos-hero-image img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .apropos-citation-carte {
+    padding: 35px 30px;
+  }
+
+  .apropos-citation {
+    font-size: 16px;
+  }
+
+  .apropos-bio {
+    padding: 60px 30px;
+  }
+
   /* PRESTATIONS */
   .prestations {
     padding: 60px 30px;
@@ -480,10 +829,26 @@ footer {
 
   .cartes {
     flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .cartes-grille {
+    grid-template-columns: 1fr;
   }
 
   .carte {
     max-width: 100%;
+  }
+
+  /* PRESTATION INTRO */
+  .prestation-intro {
+    padding: 60px 30px 40px 30px;
+  }
+
+  /* PRESTATION FAQ */
+  .prestation-faq {
+    padding: 30px 30px 60px 30px;
   }
 
   /* ACCOMPAGNEMENT */
@@ -505,20 +870,36 @@ footer {
 
   .avis-grille {
     flex-direction: column;
+    align-items: center;
+    padding-left: 0;
   }
 
   .avis-carte {
     max-width: 100%;
   }
 
+  /* CONTACT */
+  .contact {
+    padding: 60px 30px;
+  }
+
+  .contact-form {
+    padding: 30px 25px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
   /* FOOTER */
   .footer-contenu {
     flex-direction: column;
-    padding: 60px 30px;
-    gap: 40px;
+    padding: 40px 30px;
+    gap: 30px;
   }
 
   .footer-bas {
-    padding: 25px 30px;
+    padding: 15px 30px;
   }
 }

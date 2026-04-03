@@ -11,14 +11,13 @@
       <nav>
         <div class="logo"><a href="index.html"><img src="images/Logo-Ôze.jpg" alt="Ôze" /></a></div>
         <button class="burger" id="burger">&#9776;</button>
-        <ul id ="nav-menu">
+        <ul id="nav-menu">
           <li><a href="apropos.html">À propos</a></li>
           <li class="dropdown">
-            <a href="prestations.html">Prestations</a>
+            <a href="numerologie.html">Prestations</a>
             <ul class="sous-menu">
-              <li><a href="prestations.html#numerologie">Numérologie</a></li>
-              <li><a href="prestations.html#soins">Soins énergétiques</a></li>
-              <li><a href="prestations.html#hypnose">Hypnose transpersonnelle</a></li>
+              <li><a href="numerologie.html">Numérologie</a></li>
+              <li><a href="soins.html">Soins énergétiques</a></li>
             </ul>
           </li>
           <li><a href="accompagnement.html">Accompagnement 3 mois</a></li>
@@ -28,28 +27,71 @@
       </nav>
     </header>
 
-   <main>
+    <main>
       <section class="contact">
         <p class="section-label">Contact & RDV</p>
         <h1>Réservez votre séance</h1>
         <p class="contact-intro">
-          Toutes les séances se déroulent à distance, par téléphone 
-          ou visio. Choisissez directement le créneau qui vous convient.
+          Pour toutes demandes de renseignements ou d'informations, 
+          merci de remplir le formulaire suivant :
         </p>
 
-        <div class="calendly-container">
-          <div 
-            class="calendly-inline-widget" 
-            data-url="https://calendly.com/oze-spirituality/seance"
-            style="min-width:320px;height:700px;">
-          </div>
-          <script 
-            type="text/javascript" 
-            src="https://assets.calendly.com/assets/external/widget.js" 
-            async>
-          </script>
-        </div>
+        <div class="formulaire-container">
+          <form action="https://formsubmit.co/contact@oze-spirituality.com" method="POST" class="formulaire">
 
+            <div class="form-groupe">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required />
+            </div>
+
+            <div class="form-groupe">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" required />
+            </div>
+
+            <div class="form-groupe">
+              <label for="naissance">Date de naissance</label>
+              <input type="date" id="naissance" name="date_naissance" />
+            </div>
+
+            <div class="form-groupe">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-groupe">
+              <label for="adresse">Adresse</label>
+              <input type="text" id="adresse" name="adresse" />
+            </div>
+
+            <div class="form-groupe">
+              <label for="interet">Vous êtes intéressé par :</label>
+              <select id="interet" name="interet" required>
+                <option value="" disabled selected>Choisissez une prestation</option>
+                <option value="theme-naissance">Numérologie — Thème de naissance</option>
+                <option value="theme-nom">Numérologie — Thème du nom</option>
+                <option value="theme-complet">Numérologie — Thème complet</option>
+                <option value="journee-personnelle">Numérologie — Journée personnelle</option>
+                <option value="soleil-relationnel">Numérologie — Soleil Relationnel</option>
+                <option value="soin-energetique">Soin énergétique</option>
+                <option value="accompagnement">Accompagnement 3 mois</option>
+                <option value="autre">Autre / Question générale</option>
+              </select>
+            </div>
+
+            <div class="form-groupe">
+              <label for="message">Détaillez votre demande :</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <!-- FormSubmit config -->
+            <input type="hidden" name="_subject" value="Nouvelle demande depuis oze-spirituality" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://gradient-x3.github.io/oze-website/contact.html" />
+
+            <button type="submit" class="btn btn-submit">Envoyer ma demande</button>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -58,12 +100,14 @@
         <div class="footer-logo">
           <p class="logo">Ôze</p>
           <p>Oser être son âme</p>
+          <p class="footer-horaires">Du lundi au vendredi</p>
         </div>
         <div class="footer-liens">
           <p class="section-label">Navigation</p>
           <ul>
             <li><a href="apropos.html">À propos</a></li>
-            <li><a href="prestations.html">Prestations</a></li>
+            <li><a href="numerologie.html">Numérologie</a></li>
+            <li><a href="soins.html">Soins énergétiques</a></li>
             <li><a href="accompagnement.html">Accompagnement</a></li>
             <li><a href="avis.html">Avis</a></li>
             <li><a href="contact.html">Contact & RDV</a></li>
@@ -72,23 +116,22 @@
         <div class="footer-contact">
           <p class="section-label">Retrouvez-moi</p>
           <ul>
-            <li><a href="https://www.instagram.com/oze.spirituality" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/oze.spirituality" target="_blank">@oze.spirituality</a></li>
             <li><a href="mailto:contact@oze-spirituality.com">contact@oze-spirituality.com</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bas">
-        <p>© 2025 Ôze — Tous droits réservés</p>
+        <p>© 2025 Ôze — Tous droits réservés · <a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a></p>
       </div>
     </footer>
+
     <script>
       const burger = document.getElementById('burger');
       const navMenu = document.getElementById('nav-menu');
-
       burger.addEventListener('click', function() {
         navMenu.classList.toggle('ouvert');
       });
     </script>
-
   </body>
 </html>

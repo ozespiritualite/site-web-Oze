@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numérologie — Ôze</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><a href="index.html"><img src="images/Logo-Ôze.jpg" alt="Ôze" /></a></div>
+        <button class="burger" id="burger">&#9776;</button>
+        <ul id="nav-menu">
+          <li><a href="apropos.html">À propos</a></li>
+          <li class="dropdown">
+            <a href="numerologie.html">Prestations</a>
+            <ul class="sous-menu">
+              <li><a href="numerologie.html">Numérologie</a></li>
+              <li><a href="soins.html">Soins énergétiques</a></li>
+            </ul>
+          </li>
+          <li><a href="accompagnement.html">Accompagnement 3 mois</a></li>
+          <li><a href="avis.html">Avis</a></li>
+          <li><a href="contact.html">Contact & RDV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- INTRO NUMÉROLOGIE -->
+      <section class="prestation-intro">
+        <p class="section-label">Numérologie</p>
+        <h1>Qu'est-ce que la numérologie ?</h1>
+        <p class="prestation-description">
+          La numérologie est un outil de connaissance de soi basé sur 
+          l'étude des nombres liés à votre identité : date de naissance, 
+          lettres de votre prénom et de votre nom. Chaque nombre porte 
+          une vibration, un message, une énergie qui éclaire votre 
+          chemin de vie, vos forces et vos défis.
+        </p>
+      </section>
+
+      <!-- CARTES PRESTATIONS NUMÉROLOGIE -->
+      <section class="prestations">
+        <div class="cartes cartes-numerologie">
+
+          <div class="carte">
+            <p class="carte-numero">01</p>
+            <h3>Thème de naissance</h3>
+            <p>Une étude complète basée sur votre date de naissance 
+            pour révéler votre chemin de vie, vos cycles personnels 
+            et les grandes étapes de votre parcours.</p>
+            <p class="carte-prix">À partir de 45€</p>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
+
+          <div class="carte">
+            <p class="carte-numero">02</p>
+            <h3>Thème du nom</h3>
+            <p>Une analyse vibratoire de votre prénom et de votre nom 
+            pour comprendre votre personnalité profonde, vos talents 
+            innés et votre mission d'âme.</p>
+            <p class="carte-prix">À partir de 45€</p>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
+
+          <div class="carte">
+            <p class="carte-numero">03</p>
+            <h3>Thème complet</h3>
+            <p>L'étude la plus approfondie : elle combine le thème 
+            de naissance et le thème du nom pour une vision globale 
+            et détaillée de votre profil numérologique.</p>
+            <p class="carte-prix">À partir de 75€</p>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
+
+          <div class="carte">
+            <p class="carte-numero">04</p>
+            <h3>Journée personnelle</h3>
+            <p>Découvrez l'énergie du jour selon vos nombres personnels. 
+            Un éclairage quotidien pour mieux comprendre les influences 
+            qui traversent votre journée.</p>
+            <p class="carte-prix">À partir de 25€</p>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
+
+          <div class="carte">
+            <p class="carte-numero">05</p>
+            <h3>Soleil Relationnel</h3>
+            <p>Une étude croisée de deux thèmes pour éclairer la 
+            dynamique d'une relation : compatibilité, forces du duo, 
+            points de vigilance et potentiel d'évolution ensemble.</p>
+            <p class="carte-prix">À partir de 60€</p>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-contenu">
+        <div class="footer-logo">
+          <p class="logo">Ôze</p>
+          <p>Oser être son âme</p>
+          <p class="footer-horaires">Du lundi au vendredi</p>
+        </div>
+        <div class="footer-liens">
+          <p class="section-label">Navigation</p>
+          <ul>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="numerologie.html">Numérologie</a></li>
+            <li><a href="soins.html">Soins énergétiques</a></li>
+            <li><a href="accompagnement.html">Accompagnement</a></li>
+            <li><a href="avis.html">Avis</a></li>
+            <li><a href="contact.html">Contact & RDV</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <p class="section-label">Retrouvez-moi</p>
+          <ul>
+            <li><a href="https://www.instagram.com/oze.spirituality" target="_blank">@oze.spirituality</a></li>
+            <li><a href="mailto:contact@oze-spirituality.com">contact@oze-spirituality.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bas">
+        <p>© 2025 Ôze — Tous droits réservés · <a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a></p>
+      </div>
+    </footer>
+
+    <script>
+      const burger = document.getElementById('burger');
+      const navMenu = document.getElementById('nav-menu');
+      burger.addEventListener('click', function() {
+        navMenu.classList.toggle('ouvert');
+      });
+    </script>
+  </body>
+</html>

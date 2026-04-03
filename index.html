@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -9,215 +10,199 @@
   <body>
     <header>
       <nav>
-      <div class="logo"><a href="index.html"><img src="images/Logo-Ôze.jpg" alt="Ôze" /></a></div>
-      <button class="burger" id="burger">&#9776;</button>
-      <ul id="nav-menu">
-        <li><a href="apropos.html">À propos</a></li>
-        <li class="dropdown">
-          <a href="prestations.html">Prestations</a>
-          <ul class="sous-menu">
-            <li><a href="prestations.html#numerologie">Numérologie</a></li>
-            <li><a href="prestations.html#soins">Soins énergétiques</a></li>
-            <li><a href="prestations.html#hypnose">Hypnose transpersonnelle</a></li>
-          </ul>
-        </li>
-        <li><a href="accompagnement.html">Accompagnement 3 mois</a></li>
-        <li><a href="avis.html">Avis</a></li>
-        <li><a href="contact.html">Contact & RDV</a></li>
-      </ul>
+        <div class="logo"><a href="index.html"><img src="images/Logo-Ôze.jpg" alt="Ôze" /></a></div>
+        <button class="burger" id="burger">&#9776;</button>
+        <ul id="nav-menu">
+          <li><a href="apropos.html">À propos</a></li>
+          <li class="dropdown">
+            <a href="numerologie.html">Prestations</a>
+            <ul class="sous-menu">
+              <li><a href="numerologie.html">Numérologie</a></li>
+              <li><a href="soins.html">Soins énergétiques</a></li>
+            </ul>
+          </li>
+          <li><a href="accompagnement.html">Accompagnement 3 mois</a></li>
+          <li><a href="avis.html">Avis</a></li>
+          <li><a href="contact.html">Contact & RDV</a></li>
+        </ul>
       </nav>
     </header>
-  <main>
-    <section id="accueil" class="hero">
-      <p class="hero-accroche">« Oser être son âme »</p>
-      <h1>Être une passeuse d'âme</h1>
-      <p class="hero-texte">
-        Aider les êtres vivants à traverser leurs états d'âme, 
-        à passer les phases de leur vie. C'est précisément dans 
-        ce domaine qu'Alisée a décidé de se spécialiser.
-      </p>
-      <a href="#contact" class="btn">Prendre rendez-vous</a>
-    </section>
-    <section id="apropos" class="apropos">
-      <div class="apropos-image">
-        <img src="images/alisee-beige.png" alt="Alisée Vales" />
-      </div>
-      <div class="apropos-texte">
-        <p class="section-label">À propos</p>
-        <h2>Je m'appelle Alisée Valès</h2>
-        <p>
-          Numérologue et Thérapeute énergéticienne, je me suis 
-          longtemps définie comme quelqu'un de cartésien. Études 
-          de droit, CDI à Paris dans la publicité — et puis la vie 
-          en a décidé autrement.
+
+    <main>
+      <!-- HERO -->
+      <section id="accueil" class="hero">
+        <p class="hero-accroche">« Oser être son âme »</p>
+        <h1>Être une passeuse d'âme</h1>
+        <p class="hero-texte">
+          Aider les êtres vivants à traverser leurs états d'âme, 
+          à passer les phases de leur vie. C'est précisément dans 
+          ce domaine qu'Alisée a décidé de se spécialiser.
         </p>
-        <p>
-          Confrontée à des phénomènes inexpliqués, j'ai tout quitté 
-          pour retourner dans mon village du Sud-Ouest. C'est là que 
-          j'ai découvert ma vocation : accompagner les âmes qui 
-          Ôze s'éveiller.
+        <a href="contact.html" class="btn">Prendre rendez-vous</a>
+      </section>
+
+      <!-- À PROPOS -->
+      <section id="apropos" class="apropos">
+        <div class="apropos-image">
+          <img src="images/alisee-beige.png" alt="Alisée Vales" />
+        </div>
+        <div class="apropos-texte">
+          <p class="section-label">À propos</p>
+          <h2>Je m'appelle Alisée Valès</h2>
+          <p>
+            Numérologue et Thérapeute énergéticienne, je me suis 
+            longtemps définie comme quelqu'un de cartésien. Études 
+            de droit, CDI à Paris dans la publicité — et puis la vie 
+            en a décidé autrement.
+          </p>
+          <p>
+            Confrontée à des phénomènes inexpliqués, j'ai tout quitté 
+            pour retourner dans mon village du Sud-Ouest. C'est là que 
+            j'ai découvert ma vocation : accompagner les âmes qui 
+            Ôze s'éveiller.
+          </p>
+          <a href="apropos.html" class="btn">En savoir plus</a>
+        </div>
+      </section>
+
+      <!-- PRESTATIONS (2 cartes, sans hypnose) -->
+      <section id="prestations" class="prestations">
+        <p class="section-label">Mes prestations</p>
+        <h2>Comment puis-je vous accompagner ?</h2>
+
+        <div class="cartes">
+          <div class="carte">
+            <p class="carte-numero">01</p>
+            <h3>Numérologie</h3>
+            <p>Découvrez les vibrations de votre chemin de vie, 
+            vos forces, vos défis et votre mission d'âme à travers 
+            l'étude de vos chiffres personnels.</p>
+            <p class="carte-prix">À partir de 45€</p>
+            <a href="numerologie.html" class="btn">Découvrir</a>
+          </div>
+
+          <div class="carte">
+            <p class="carte-numero">02</p>
+            <h3>Soins énergétiques</h3>
+            <p>Un soin à distance pour libérer vos blocages 
+            énergétiques, rééquilibrer vos corps subtils et 
+            retrouver fluidité et légèreté.</p>
+            <p class="carte-prix">À partir de 60€</p>
+            <a href="soins.html" class="btn">Découvrir</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCOMPAGNEMENT -->
+      <section id="accompagnement" class="accompagnement">
+        <div class="accompagnement-texte">
+          <p class="section-label">Accompagnement</p>
+          <h2>Un chemin de transformation sur 3 mois</h2>
+          <p>
+            Un accompagnement profond et personnalisé pour vous 
+            reconnecter à votre essence, libérer vos blocages 
+            et avancer avec clarté sur votre chemin de vie.
+          </p>
+          <ul class="accompagnement-liste">
+            <li>✦ 6 séances individuelles (numérologie + soins)</li>
+            <li>✦ Suivi personnalisé entre les séances</li>
+            <li>✦ Accès à des ressources exclusives</li>
+            <li>✦ 100% à distance, à votre rythme</li>
+          </ul>
+          <p class="carte-prix">Sur devis</p>
+          <a href="contact.html" class="btn">Me contacter</a>
+        </div>
+        <div class="accompagnement-image">
+          <img src="images/alisee-bleu.png" alt="Alisée Vales" />
+        </div>
+      </section>
+
+      <!-- AVIS -->
+      <section id="avis" class="avis">
+        <p class="section-label">Témoignages</p>
+        <h2>Ce qu'elles disent</h2>
+
+        <div class="avis-grille">
+          <div class="avis-carte">
+            <p class="avis-texte">
+              « Une séance bouleversante. Alisée a mis des mots sur 
+              des choses que je ressentais depuis des années sans 
+              pouvoir les exprimer. Je me sens enfin alignée. »
+            </p>
+            <p class="avis-auteur">— Sophie M.</p>
+          </div>
+
+          <div class="avis-carte">
+            <p class="avis-texte">
+              « Mon thème numérologique m'a ouvert les yeux sur ma 
+              mission de vie. Un travail précis, bienveillant et 
+              profondément juste. Merci Alisée. »
+            </p>
+            <p class="avis-auteur">— Camille R.</p>
+          </div>
+
+          <div class="avis-carte">
+            <p class="avis-texte">
+              « Le soin énergétique à distance m'a surprise par sa 
+              puissance. J'ai ressenti une légèreté immédiate. 
+              Je recommande les yeux fermés. »
+            </p>
+            <p class="avis-auteur">— Marion D.</p>
+          </div>
+        </div>
+
+        <a href="avis.html" class="btn">Voir tous les avis</a>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact">
+        <p class="section-label">Contact & RDV</p>
+        <h2>Réservez votre séance</h2>
+        <p class="contact-intro">
+          Toutes les séances se déroulent à distance, par téléphone 
+          ou visio. Choisissez directement le créneau qui vous convient.
         </p>
-        <a href="#contact" class="btn">Me contacter</a>
-      </div>
-    </section>
-    <section id="prestations" class="prestations">
-      <p class="section-label">Mes prestations</p>
-      <h2>Comment puis-je vous accompagner ?</h2>
+        <a href="contact.html" class="btn">Me contacter</a>
+      </section>
+    </main>
 
-      <div class="cartes">
-
-        <div class="carte" id="numerologie">
-          <p class="carte-numero">01</p>
-          <h3>Numérologie</h3>
-          <p>Découvrez les vibrations de votre chemin de vie, 
-          vos forces, vos défis et votre mission d'âme à travers 
-          l'étude de vos chiffres personnels.</p>
-          <p class="carte-prix">À partir de 45€</p>
-          <a href="#contact" class="btn">Réserver</a>
+    <footer>
+      <div class="footer-contenu">
+        <div class="footer-logo">
+          <p class="logo">Ôze</p>
+          <p>Oser être son âme</p>
+          <p class="footer-horaires">Du lundi au vendredi</p>
         </div>
-
-        <div class="carte" id="soins">
-          <p class="carte-numero">02</p>
-          <h3>Soins énergétiques</h3>
-          <p>Un soin à distance pour libérer vos blocages 
-          énergétiques, rééquilibrer vos corps subtils et 
-          retrouver fluidité et légèreté.</p>
-          <p class="carte-prix">À partir de 60€</p>
-          <a href="#contact" class="btn">Réserver</a>
+        <div class="footer-liens">
+          <p class="section-label">Navigation</p>
+          <ul>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="numerologie.html">Numérologie</a></li>
+            <li><a href="soins.html">Soins énergétiques</a></li>
+            <li><a href="accompagnement.html">Accompagnement</a></li>
+            <li><a href="avis.html">Avis</a></li>
+            <li><a href="contact.html">Contact & RDV</a></li>
+          </ul>
         </div>
-
-        <div class="carte" id="hypnose">
-          <p class="carte-numero">03</p>
-          <h3>Hypnose transpersonnelle</h3>
-          <p>Une séance d'hypnose profonde pour explorer 
-          vos mémoires d'âme, libérer vos schémas répétitifs 
-          et vous reconnecter à votre essence.</p>
-          <p class="carte-prix">À partir de 80€</p>
-          <a href="#contact" class="btn">Réserver</a>
+        <div class="footer-contact">
+          <p class="section-label">Retrouvez-moi</p>
+          <ul>
+            <li><a href="https://www.instagram.com/oze.spirituality" target="_blank">@oze.spirituality</a></li>
+            <li><a href="mailto:contact@oze-spirituality.com">contact@oze-spirituality.com</a></li>
+          </ul>
         </div>
-
       </div>
-    </section>
-    <section id="accompagnement" class="accompagnement">
-      <div class="accompagnement-texte">
-        <p class="section-label">Accompagnement</p>
-        <h2>Un chemin de transformation sur 3 mois</h2>
-        <p>
-          Un accompagnement profond et personnalisé pour vous 
-          reconnecter à votre essence, libérer vos blocages 
-          et avancer avec clarté sur votre chemin de vie.
-        </p>
-        <ul class="accompagnement-liste">
-          <li>✦ 6 séances individuelles (numérologie + soins)</li>
-          <li>✦ Suivi personnalisé entre les séances</li>
-          <li>✦ Accès à des ressources exclusives</li>
-          <li>✦ 100% à distance, à votre rythme</li>
-        </ul>
-        <p class="carte-prix">Sur devis</p>
-        <a href="#contact" class="btn">Me contacter</a>
+      <div class="footer-bas">
+        <p>© 2025 Ôze — Tous droits réservés · <a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a></p>
       </div>
-      <div class="accompagnement-image">
-        <img src="images/alisee-bleu.png" alt="Alisée Vales" />
-      </div>
-    </section>
-    <section id="avis" class="avis">
-      <p class="section-label">Témoignages</p>
-      <h2>Ce qu'elles disent</h2>
+    </footer>
 
-      <div class="avis-grille">
-
-        <div class="avis-carte">
-          <p class="avis-texte">
-            « Une séance bouleversante. Alisée a mis des mots sur 
-            des choses que je ressentais depuis des années sans 
-            pouvoir les exprimer. Je me sens enfin alignée. »
-          </p>
-          <p class="avis-auteur">— Sophie M.</p>
-        </div>
-
-        <div class="avis-carte">
-          <p class="avis-texte">
-            « Mon thème numérologique m'a ouvert les yeux sur ma 
-            mission de vie. Un travail précis, bienveillant et 
-            profondément juste. Merci Alisée. »
-          </p>
-          <p class="avis-auteur">— Camille R.</p>
-        </div>
-
-        <div class="avis-carte">
-          <p class="avis-texte">
-            « Le soin énergétique à distance m'a surprise par sa 
-            puissance. J'ai ressenti une légèreté immédiate. 
-            Je recommande les yeux fermés. »
-          </p>
-          <p class="avis-auteur">— Marion D.</p>
-        </div>
-
-      </div>
-    </section>
-    <section id="contact" class="contact">
-      <p class="section-label">Contact & RDV</p>
-      <h2>Réservez votre séance</h2>
-      <p class="contact-intro">
-        Toutes les séances se déroulent à distance, par téléphone 
-        ou visio. Choisissez directement le créneau qui vous convient.
-      </p>
-
-      <!-- CALENDLY -->
-      <div class="calendly-container">
-        <div 
-          class="calendly-inline-widget" 
-          data-url="https://calendly.com/oze-spirituality/seance"
-          style="min-width:320px;height:700px;">
-        </div>
-        <script 
-          type="text/javascript" 
-          src="https://assets.calendly.com/assets/external/widget.js" 
-          async>
-        </script>
-      </div>
-
-    </section>
-  </main>
-  <footer>
-    <div class="footer-contenu">
-      <div class="footer-logo">
-        <p class="logo">Ôze</p>
-        <p>Oser être son âme</p>
-      </div>
-
-      <div class="footer-liens">
-        <p class="section-label">Navigation</p>
-        <ul>
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="#prestations">Prestations</a></li>
-          <li><a href="#accompagnement">Accompagnement</a></li>
-          <li><a href="#avis">Avis</a></li>
-          <li><a href="#contact">Contact & RDV</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <p class="section-label">Retrouvez-moi</p>
-        <ul>
-          <li><a href="https://www.instagram.com/oze.spirituality" target="_blank">Instagram</a></li>
-          <li><a href="mailto:contact@oze-spirituality.com">contact@oze-spirituality.com</a></li>
-        </ul>
-      </div>
-
-    </div>
-    <div class="footer-bas">
-      <p>© 2025 Ôze — Tous droits réservés</p>
-    </div>
-  </footer>
-  <script>
+    <script>
       const burger = document.getElementById('burger');
       const navMenu = document.getElementById('nav-menu');
-
       burger.addEventListener('click', function() {
         navMenu.classList.toggle('ouvert');
       });
     </script>
-    
-  </body> 
+  </body>
 </html>
