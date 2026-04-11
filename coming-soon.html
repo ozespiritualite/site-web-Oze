@@ -6,8 +6,14 @@
     <title>Bientôt disponible — Ôze</title>
     <link rel="stylesheet" href="css/style.css" />
     <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
       .coming-soon {
-        min-height: 70vh;
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -17,20 +23,17 @@
         gap: 30px;
       }
 
-      .coming-soon h1 {
-        font-size: 58px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--texte);
-        max-width: 680px;
-        line-height: 1.3;
+      .coming-soon p {
+        font-size: 18px;
+        color: var(--texte-clair);
+        line-height: 1.7;
+        margin: 0;
       }
 
-      .coming-soon p {
-        font-size: 15px;
-        color: var(--texte-clair);
-        max-width: 520px;
-        line-height: 1.9;
+      .coming-soon-texte {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
       }
 
       .coming-soon-ornement {
@@ -75,16 +78,10 @@
       <section class="coming-soon">
         <p class="section-label">Bientôt disponible</p>
         <span class="coming-soon-ornement">✦ ✦ ✦</span>
-        <h1>Quelque chose de beau se prépare</h1>
-        <p>
-          Cette page est en cours de création. Revenez bientôt pour
-          découvrir cette nouvelle offre d'accompagnement.
-        </p>
-        <p>
-          En attendant, n'hésitez pas à me contacter pour toute question
-          ou pour réserver une séance existante.
-        </p>
-        <a href="contact.html" class="btn">Me contacter</a>
+        <div class="coming-soon-texte">
+          <p>L'aventure Ôze ne fait que débuter, certaines prestations ne sont pas encore disponibles.</p>
+          <p>Encore un peu de patience ...</p>
+        </div>
       </section>
     </main>
 
