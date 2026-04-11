@@ -48,3 +48,28 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', closeMenu);
   });
 });
+
+// ===== SCROLL ANIMATIONS =====
+document.addEventListener('DOMContentLoaded', function () {
+  var els = document.querySelectorAll('.carte, .avis-carte');
+  if (!els.length) return;
+
+  els.forEach(function (el) {
+    el.classList.add('will-animate');
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var siblings = Array.from(el.parentElement.children);
+        var index = siblings.indexOf(el);
+        el.style.transitionDelay = (index * 0.18) + 's';
+        el.classList.add('visible');
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(function (el) { observer.observe(el); });
+});
