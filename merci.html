@@ -3,8 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact & RDV — Ôze</title>
+    <title>Merci — Ôze</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .merci {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 80px 60px;
+        gap: 30px;
+      }
+
+      .merci h1 {
+        margin: 0;
+      }
+
+      .merci p {
+        font-size: 18px;
+        color: var(--texte-clair);
+        line-height: 1.7;
+        margin: 0;
+        max-width: 640px;
+      }
+
+      .merci-texte {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .merci-ornement {
+        font-size: 28px;
+        color: var(--bleu);
+        letter-spacing: 12px;
+      }
+
+      .merci-retour {
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .merci h1 {
+          font-size: 36px;
+        }
+        .merci {
+          padding: 60px 30px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -29,82 +85,18 @@
     </header>
 
     <main>
-      <section class="contact">
-        <p class="section-label">Contact & RDV</p>
-        <h1>Pour toute demande de rendez-vous ou d'informations,<br>merci de remplir le formulaire suivant :</h1>
-
-        <form action="https://formsubmit.co/contact@oze-spiritualite.com" method="POST" class="contact-form">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="prenom">Prénoms * <em>Veuillez indiquer TOUS vos prénoms</em></label>
-              <input type="text" id="prenom" name="prenom" required />
-            </div>
-            <div class="form-group">
-              <label for="nom">Nom *</label>
-              <input type="text" id="nom" name="nom" required />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="telephone">Téléphone</label>
-              <input type="tel" id="telephone" name="telephone" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="adresse">Adresse postale *</label>
-            <input type="text" id="adresse" name="adresse" />
-          </div>
-
-          <div class="form-group">
-            <label for="naissance">Date de naissance *</label>
-            <input type="date" id="naissance" name="date_naissance" />
-          </div>
-
-          <div class="form-group">
-            <label for="interet">Prestation souhaitée *</label>
-            <select id="interet" name="interet" required>
-              <option value="" disabled selected>Choisissez une prestation</option>
-              <option value="theme-naissance">Numérologie — Thème analyse date de naissance</option>
-              <option value="theme-nom">Numérologie — Thème analyse prénoms et nom</option>
-              <option value="theme-complet">Numérologie — Thème complet</option>
-              <option value="journee-personnelle">Numérologie — Journée personnelle</option>
-              <option value="soleil-relationnel">Numérologie — Soleil Relationnel</option>
-              <option value="autre">Autre / Question générale</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Votre message *</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-
-          <p class="form-mentions">* Champs obligatoires</p>
-
-          <div class="form-checkboxes">
-            <label class="form-checkbox-label">
-              <input type="checkbox" name="rgpd" required />
-              <span>J'accepte la <a href="mentions-legales.html">politique de confidentialité</a> et le traitement de mes données personnelles</span>
-            </label>
-            <label class="form-checkbox-label">
-              <input type="checkbox" name="cgv" required />
-              <span>J'accepte les <a href="mentions-legales.html">CGV</a></span>
-            </label>
-          </div>
-
-          <!-- FormSubmit config -->
-          <input type="hidden" name="_subject" value="Nouvelle demande depuis oze-spirituality" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://gradient-x3.github.io/oze-website/merci.html" />
-
-          <button type="submit" class="btn btn-submit">Envoyer ma demande</button>
-        </form>
+      <section class="merci">
+        <p class="section-label">Demande envoyée</p>
+        <h1>Merci pour votre message</h1>
+        <span class="merci-ornement">✦ ✦ ✦</span>
+        <div class="merci-texte">
+          <p>Votre demande a bien été transmise.</p>
+          <p>Je vous répondrai personnellement dans les plus brefs délais, avec toute l'attention qu'elle mérite.</p>
+          <p>À très bientôt,<br>Ôze</p>
+        </div>
+        <div class="merci-retour">
+          <a href="apropos.html" class="btn">Retour à l'accueil</a>
+        </div>
       </section>
     </main>
     <footer>
