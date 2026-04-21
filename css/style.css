@@ -1011,6 +1011,37 @@ nav > ul > li > a:hover::before {
   letter-spacing: 0.5px;
 }
 
+.form-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0 24px;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--texte-clair);
+  line-height: 1.6;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-top: 3px;
+  width: 15px;
+  height: 15px;
+  accent-color: var(--bleu);
+  cursor: pointer;
+}
+
+.form-checkbox-label a {
+  color: var(--bleu-fonce);
+  text-decoration: underline;
+}
+
 .contact-form .btn {
   margin-top: 10px;
   cursor: pointer;
@@ -1044,6 +1075,16 @@ footer {
 .footer-emoji {
   font-size: 20px;
   opacity: 0.8;
+}
+
+.footer-col svg {
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-col a:hover svg {
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 .footer-col p {
