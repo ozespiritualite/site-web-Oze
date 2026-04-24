@@ -997,21 +997,38 @@ nav > ul > li > a:hover::before {
 .form-group input[type="date"] {
   appearance: none;
   -webkit-appearance: none;
-  min-height: 0;
-  height: auto;
-  line-height: 1.2;
-  text-align: left;
   display: block;
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
+  padding: 13px 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  height: 49px;
+  min-height: 49px;
+  text-align: left;
+  background-color: var(--blanc);
+  color: var(--texte);
+  border: 1px solid rgba(123, 163, 184, 0.4);
+  border-radius: 8px;
 }
 
 .form-group input[type="date"]::-webkit-date-and-time-value {
   text-align: left;
   min-height: 1.2em;
+  margin: 0;
+  padding: 0;
 }
 
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: auto;
+  padding: 0;
+}
+
+.form-group input[type="date"]::-webkit-inner-spin-button,
+.form-group input[type="date"]::-webkit-clear-button {
+  display: none;
 }
 
 .form-hint {
