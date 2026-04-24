@@ -997,9 +997,11 @@ nav > ul > li > a:hover::before {
 .form-group input[type="date"] {
   appearance: none;
   -webkit-appearance: none;
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   max-width: 100%;
+  min-width: 0;
   box-sizing: border-box;
   padding: 13px 16px;
   font-family: var(--font-body);
@@ -1017,18 +1019,28 @@ nav > ul > li > a:hover::before {
 .form-group input[type="date"]::-webkit-date-and-time-value {
   text-align: left;
   min-height: 1.2em;
+  min-width: 0;
   margin: 0;
   padding: 0;
+  flex: 1 1 auto;
 }
 
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
-  margin-left: auto;
+  margin-left: 8px;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .form-group input[type="date"]::-webkit-inner-spin-button,
 .form-group input[type="date"]::-webkit-clear-button {
   display: none;
+  -webkit-appearance: none;
+}
+
+.form-group input[type="date"]::-webkit-datetime-edit {
+  text-align: left;
+  padding: 0;
+  display: block;
 }
 
 .form-hint {
