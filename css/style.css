@@ -994,6 +994,26 @@ nav > ul > li > a:hover::before {
   min-height: 130px;
 }
 
+.form-group input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 0;
+  height: auto;
+  line-height: 1.2;
+  text-align: left;
+  display: block;
+  box-sizing: border-box;
+}
+
+.form-group input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  min-height: 1.2em;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-left: auto;
+}
+
 .form-hint {
   font-size: 10px;
   letter-spacing: 1px;
