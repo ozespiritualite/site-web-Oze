@@ -1502,6 +1502,18 @@ footer {
     gap: 0;
   }
 
+  .form-row .form-group,
+  .contact-form .form-group {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .contact-form,
+  .contact-form .form-group,
+  .contact-form .form-group label {
+    text-align: left;
+  }
+
   /* FOOTER */
   .footer-contenu {
     flex-direction: column;
