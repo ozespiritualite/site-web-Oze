@@ -31,7 +31,10 @@
         <p class="section-label">Contact & RDV</p>
         <h1>Pour toute demande de rendez-vous ou d'informations,<br>merci de remplir le formulaire suivant :</h1>
 
-        <form action="https://formsubmit.co/contact@oze-spiritualite.com" method="POST" class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="6d8d93d9-8718-4e64-9afb-b52cef9378a6" />
+          <input type="hidden" name="subject" value="Nouvelle demande depuis oze-spiritualite.com" />
+          <input type="hidden" name="redirect" value="https://oze-spiritualite.com/merci.html" />
 
           <div class="form-row">
             <div class="form-group">
@@ -95,11 +98,6 @@
               <span>J'accepte les <a href="mentions-legales.html">CGV</a></span>
             </label>
           </div>
-
-          <!-- FormSubmit config -->
-          <input type="hidden" name="_subject" value="Nouvelle demande depuis oze-spirituality" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://gradient-x3.github.io/oze-website/merci.html" />
 
           <button type="submit" class="btn btn-submit">Envoyer ma demande</button>
         </form>
