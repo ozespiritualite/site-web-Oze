@@ -15,300 +15,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="css/style.css?v=2" />
-    <style>
-      /* ===== SOINS — HERO ===== */
-      .soins-hero {
-        background-color: var(--bleu);
-        padding: 90px 60px 100px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 28px;
-      }
-
-      .soins-hero .section-label {
-        color: var(--creme);
-        opacity: 0.75;
-      }
-
-      .soins-hero h1 {
-        font-size: 58px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--blanc);
-        max-width: 720px;
-        line-height: 1.25;
-      }
-
-      .soins-hero p {
-        font-size: 16px;
-        color: var(--creme);
-        max-width: 540px;
-        line-height: 1.9;
-        opacity: 0.9;
-      }
-
-      .btn-clair {
-        border-color: var(--creme);
-        color: var(--creme);
-      }
-
-      .btn-clair:hover {
-        background-color: var(--creme);
-        color: var(--bleu);
-      }
-
-      /* ===== BÉNÉFICES ===== */
-      .soins-benefices {
-        background-color: var(--blanc);
-        padding: 100px 80px;
-        text-align: center;
-      }
-
-      .soins-benefices .section-label {
-        margin-bottom: 14px;
-      }
-
-      .soins-benefices h2 {
-        font-size: 38px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--texte);
-        margin-bottom: 70px;
-      }
-
-      .benefices-grille {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      .benefice-carte {
-        background-color: var(--blanc);
-        border-radius: 14px;
-        padding: 48px 36px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-        text-align: center;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-        transition: transform 0.3s ease;
-      }
-
-      .benefice-carte:hover {
-        transform: translateY(-4px);
-      }
-
-      .benefice-icone {
-        font-size: 34px;
-      }
-
-      .benefice-carte h3 {
-        font-size: 18px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--texte);
-      }
-
-      .benefice-carte p {
-        font-size: 14px;
-        color: var(--texte-clair);
-        line-height: 1.85;
-      }
-
-      /* ===== DÉROULEMENT ===== */
-      .soins-deroulement {
-        background-color: var(--blanc);
-        padding: 100px 80px;
-        text-align: center;
-      }
-
-      .soins-deroulement .section-label {
-        margin-bottom: 14px;
-      }
-
-      .soins-deroulement h2 {
-        font-size: 38px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--texte);
-        margin-bottom: 70px;
-      }
-
-      .etapes {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        max-width: 680px;
-        margin: 0 auto;
-        text-align: left;
-      }
-
-      .etape {
-        display: flex;
-        gap: 36px;
-        align-items: flex-start;
-        padding: 36px 0;
-        border-bottom: 1px solid rgba(123, 163, 184, 0.25);
-      }
-
-      .etape:last-child {
-        border-bottom: none;
-      }
-
-      .etape-num {
-        font-size: 11px;
-        letter-spacing: 3px;
-        color: var(--bleu);
-        text-transform: uppercase;
-        min-width: 28px;
-        padding-top: 4px;
-      }
-
-      .etape-contenu h3 {
-        font-size: 19px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--texte);
-        margin-bottom: 10px;
-      }
-
-      .etape-contenu p {
-        font-size: 14px;
-        color: var(--texte-clair);
-        line-height: 1.85;
-      }
-
-      /* ===== FAQ ===== */
-      .soins-faq {
-        background-color: var(--blanc);
-        padding: 100px 80px;
-        text-align: center;
-      }
-
-      .soins-faq .section-label {
-        margin-bottom: 14px;
-      }
-
-      .soins-faq h2 {
-        font-size: 38px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--texte);
-        margin-bottom: 60px;
-      }
-
-      .faq-liste {
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: left;
-      }
-
-      .faq-item {
-        border-bottom: 1px solid rgba(123, 163, 184, 0.4);
-      }
-
-      .faq-item:first-child {
-        border-top: 1px solid rgba(123, 163, 184, 0.4);
-      }
-
-      .faq-item summary {
-        list-style: none;
-        cursor: pointer;
-        padding: 24px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 16px;
-        font-style: italic;
-        color: var(--texte);
-        user-select: none;
-      }
-
-      .faq-item summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .faq-item summary::after {
-        content: '+';
-        font-size: 22px;
-        font-style: normal;
-        color: var(--bleu);
-        transition: transform 0.3s ease;
-        flex-shrink: 0;
-        margin-left: 20px;
-      }
-
-      .faq-item[open] summary::after {
-        transform: rotate(45deg);
-      }
-
-      .faq-item p {
-        font-size: 14px;
-        color: var(--texte-clair);
-        line-height: 1.9;
-        padding-bottom: 24px;
-        max-width: 620px;
-      }
-
-      /* ===== TARIF + CTA ===== */
-      .soins-tarif {
-        background-color: var(--bleu);
-        padding: 100px 60px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-      }
-
-      .soins-tarif .section-label {
-        color: var(--creme);
-        opacity: 0.75;
-      }
-
-      .soins-tarif h2 {
-        font-size: 44px;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--blanc);
-      }
-
-      .soins-tarif p {
-        font-size: 15px;
-        color: var(--creme);
-        max-width: 480px;
-        line-height: 1.9;
-        opacity: 0.9;
-      }
-
-      /* ===== RESPONSIVE ===== */
-      @media (max-width: 1024px) {
-        .benefices-grille {
-          grid-template-columns: 1fr;
-          max-width: 480px;
-        }
-
-        .soins-hero h1 {
-          font-size: 38px;
-        }
-
-        .soins-benefices,
-        .soins-deroulement,
-        .soins-faq {
-          padding: 70px 30px;
-        }
-
-        .soins-hero,
-        .soins-tarif {
-          padding: 70px 30px;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -321,7 +27,7 @@
             <a href="numerologie.html">Prestations</a>
             <ul class="sous-menu">
               <li><a href="numerologie.html">Numérologie</a></li>
-              <li><a href="coming-soon.html">Soins énergétiques</a></li>
+              <li><a href="soins.html">Soins énergétiques</a></li>
             </ul>
           </li>
           <li><a href="avis.html">Avis</a></li>
@@ -332,154 +38,156 @@
 
     <main>
 
-      <!-- HERO -->
-      <section class="soins-hero">
-        <p class="section-label">Soins énergétiques</p>
-        <h1>Libérez vos blocages.<br>Retrouvez votre fluidité.</h1>
-        <p>
-          Fatigue inexpliquée, émotions enkystées, sentiment de stagnation —
-          le soin énergétique agit en profondeur sur vos corps subtils
-          pour restaurer l'équilibre et la légèreté.
-        </p>
-        <a href="contact.html" class="btn btn-clair">Réserver un soin</a>
-      </section>
+      <!-- INTRO SOINS ÉNERGÉTIQUES (3 blocs bleus) -->
+      <section class="prestation-intro">
+        <p class="section-label prestation-label-ext">Soins énergétiques</p>
+        <div class="carte-creme soins-bloc-unique">
 
-      <!-- BÉNÉFICES -->
-      <section class="soins-benefices">
-        <p class="section-label">Ce que ça vous apporte</p>
-        <h2>Pourquoi un soin énergétique ?</h2>
-        <div class="benefices-grille">
-
-          <div class="benefice-carte">
-            <span class="benefice-icone">🌊</span>
-            <h3>Libération</h3>
-            <p>Tensions émotionnelles, mémoires bloquées, schémas répétitifs —
-            le soin travaille à dissoudre ce qui entrave votre élan naturel.</p>
+          <div class="soins-colonne">
+            <h2 class="carte-creme-titre-top">Qu'est ce qu'un soin énergétique ?</h2>
+            <p class="prestation-description">
+              Un soin énergétique est une pratique douce, visant à faire
+              circuler l'énergie vitale d'un être vivant pour l'harmoniser et la
+              libérer de ses blocages. En effet, nous possédons tous (humains,
+              animaux, végétaux...) un champ énergétique qui entoure et traverse
+              notre corps physique. Tout au long de notre vie, nous accumulons
+              des pensées, des émotions, des liens relationnels [...] qui vont
+              venir déséquilibrer ce champ. Ces énergies, souvent négatives, vont
+              se loger dans nos différents corps subtils, entraînant avec elles
+              des troubles physiques, mentaux et émotionnels. Nous ressentons
+              alors une forme de mal-être, pouvant même aller jusqu'au
+              développement de maladies (« le mal a dit »).
+            </p>
           </div>
 
-          <div class="benefice-carte">
-            <span class="benefice-icone">✦</span>
-            <h3>Équilibre</h3>
-            <p>Vos centres énergétiques retrouvent leur harmonie. Le corps,
-            l'émotionnel et le mental s'alignent pour une vie plus fluide.</p>
+          <div class="soins-separateur"></div>
+
+          <div class="soins-colonne">
+            <h2 class="carte-creme-titre-top">À qui s'adresse cette pratique ?</h2>
+            <p class="prestation-description">
+              Un soin énergétique s'adresse à tous. Il peut être réalisé à titre
+              préventif, ou pour traiter un trouble déjà installé (qu'il soit
+              physique, mental ou émotionnel). Ainsi, il peut autant être utile à
+              une personne qui souhaite s'accorder un moment de détente et
+              refaire le plein d'énergie (dans ce cas-là, voyez le soin comme un
+              massage non pas de votre corps physique, mais de vos corps
+              énergétiques), qu'à une personne souhaitant traiter un trouble déjà
+              présent (fatigue, stress, problème physique, maladie...).
+            </p>
+            <p class="prestation-description">
+              Pour rappel, un soin énergétique ne dispense en aucun cas d'un
+              avis, d'un suivi ou d'un traitement médical. Il agit, au contraire,
+              en soutien à celui-ci, pour traiter le problème dans son entièreté.
+              Par ailleurs, le thérapeute ne fait que réactiver votre propre
+              processus d'auto-guérison. Vous êtes acteur à part entière dans ce
+              cheminement, et nous allons pour cela travailler en collaboration.
+            </p>
           </div>
 
-          <div class="benefice-carte">
-            <span class="benefice-icone">🌿</span>
-            <h3>Légèreté</h3>
-            <p>Après un soin, beaucoup ressentent un apaisement profond,
-            une clarté retrouvée et une connexion renouvelée à eux-mêmes.</p>
-          </div>
+          <div class="soins-separateur"></div>
 
-        </div>
-      </section>
-
-      <!-- DÉROULEMENT -->
-      <section class="soins-deroulement">
-        <p class="section-label">Comment ça se passe</p>
-        <h2>Une séance en 4 temps</h2>
-        <div class="etapes">
-
-          <div class="etape">
-            <span class="etape-num">01</span>
-            <div class="etape-contenu">
-              <h3>L'intention</h3>
-              <p>Avant la séance, vous me partagez ce que vous traversez —
-              par message ou à l'oral. Ce premier échange pose l'intention
-              du soin et me permet de me préparer à votre énergie.</p>
-            </div>
-          </div>
-
-          <div class="etape">
-            <span class="etape-num">02</span>
-            <div class="etape-contenu">
-              <h3>Le soin à distance</h3>
-              <p>Vous vous installez confortablement chez vous, au calme.
-              Je travaille alors sur vos corps subtils, vos chakras et
-              vos mémoires énergétiques. La séance dure environ 45 minutes.</p>
-            </div>
-          </div>
-
-          <div class="etape">
-            <span class="etape-num">03</span>
-            <div class="etape-contenu">
-              <h3>Le retour</h3>
-              <p>Après le soin, je vous envoie un compte-rendu détaillé :
-              ce que j'ai perçu, travaillé, libéré. Vous recevez aussi
-              des conseils pour intégrer le soin dans les jours qui suivent.</p>
-            </div>
-          </div>
-
-          <div class="etape">
-            <span class="etape-num">04</span>
-            <div class="etape-contenu">
-              <h3>L'intégration</h3>
-              <p>Les effets d'un soin se déploient souvent sur 3 à 7 jours.
-              Hydratation, repos, douceur envers soi — je vous guide
-              pour traverser cette période avec bienveillance.</p>
-            </div>
+          <div class="soins-colonne">
+            <h2 class="carte-creme-titre-top">Comment se déroule une séance ?</h2>
+            <p class="prestation-description">
+              Un soin énergétique s'adapte à chaque personne, à chaque
+              problématique. Il est donc difficile de donner une durée précise,
+              car cela dépend grandement du nombre de centres énergétiques à
+              nettoyer. Les soins que je propose se déroulent à distance (les
+              connexions énergétiques se font indépendamment du temps et de
+              l'espace).
+            </p>
+            <p class="prestation-description">
+              Après avoir pris connaissance des raisons pour lesquelles vous venez
+              consulter, nous convenons d'une date et d'une heure de rendez-vous.
+              Le soin sera effectué dans les 48h précédant notre rendez-vous.
+              Vous n'avez rien à faire de votre côté, notre rendez-vous servira
+              uniquement au débrief du soin effectué (comptez environ 30mn).
+            </p>
+            <p class="prestation-description">
+              Toutefois, je me permets tout de même de vous envoyer une musique
+              dont la fréquence sera choisie en fonction de votre problématique.
+              Il vous est conseillé de prendre un moment pour vous, avant notre
+              entretien, pour l'écouter et vous détendre, afin de vous impliquer
+              consciemment dans le processus d'auto-guérison.
+            </p>
           </div>
 
         </div>
       </section>
 
-      <!-- FAQ -->
-      <section class="soins-faq">
-        <p class="section-label">Vos questions</p>
-        <h2>Ce qu'on me demande souvent</h2>
-        <div class="faq-liste">
+      <!-- CARTES PRESTATIONS SOINS -->
+      <section class="prestations">
+        <div class="cartes cartes-numerologie">
 
-          <details class="faq-item">
-            <summary>Est-ce aussi efficace à distance qu'en présentiel ?</summary>
-            <p>Oui. L'énergie n'a pas de limite géographique. Un soin à distance
-            est tout aussi puissant qu'en cabinet. De nombreux témoignages
-            décrivent des ressentis intenses, même à des milliers de kilomètres.
-            Ce qui compte, c'est l'intention et la connexion.</p>
-          </details>
+          <div class="carte">
+            <h3>Soin énergétique simple</h3>
+            <div class="carte-section">
+              <p class="carte-section-titre">Centres énergétiques nettoyés</p>
+              <p>Nous procédons ici au nettoyage, à l'harmonisation et à la recharge de vos 7 chakras principaux, ainsi que du chakra Étoile de l'Âme, Alta Major &amp; Étoile de la Terre.</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">Pour qui ?</p>
+              <p>Ce soin s'adresse aux personnes souhaitant soutenir leur équilibre énergétique au quotidien. Il est particulièrement indiqué en cas de fatigue passagère, de stress ponctuel ou de sensation de désalignement léger. Il permet de réharmoniser les centres énergétiques principaux et de favoriser une meilleure circulation de l'énergie, essentiellement dans une démarche de prévention et de bien-être global.</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">À quel prix ?</p>
+              <p class="carte-prix-detail">45€</p>
+            </div>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
 
-          <details class="faq-item">
-            <summary>Pour qui est-ce adapté ?</summary>
-            <p>Le soin énergétique s'adresse à toute personne qui traverse
-            une période de fatigue, de stress, de deuil, de transition ou
-            simplement qui souhaite se reconnecter à elle-même. Aucun prérequis
-            spirituel n'est nécessaire.</p>
-          </details>
+          <div class="carte">
+            <h3>Soin énergétique complet</h3>
+            <div class="carte-section">
+              <p class="carte-section-titre">Centres énergétiques nettoyés</p>
+              <p>Nous procédons ici au nettoyage, à l'harmonisation et à la recharge de vos 7 chakras principaux, ainsi que de tous vos corps énergétiques.</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">Pour qui ?</p>
+              <p>Ce soin est destiné aux personnes traversant une période de déséquilibre plus installé, qu'il soit émotionnel, mental ou physique. Il peut accompagner des états de fatigue persistante, de surcharge émotionnelle ou de blocages récurrents. En agissant à la fois sur les chakras et les corps énergétiques, il soutient un processus de régulation plus profond pour un retour progressif à l'équilibre.</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">À quel prix ?</p>
+              <p class="carte-prix-detail">60€</p>
+            </div>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
 
-          <details class="faq-item">
-            <summary>Combien de séances faut-il ?</summary>
-            <p>Une seule séance peut déjà produire des effets visibles.
-            Pour un travail plus profond sur des blocages anciens, un
-            accompagnement de 3 à 6 séances est souvent recommandé,
-            à espacer de 2 à 4 semaines.</p>
-          </details>
+          <div class="carte">
+            <h3>Soin énergétique intégral</h3>
+            <div class="carte-section">
+              <p class="carte-section-titre">Centres énergétiques nettoyés</p>
+              <p>Nous procédons ici au nettoyage, à l'harmonisation et à la recharge de vos 7 chakras principaux, de tous vos corps énergétiques, ainsi que des différents axes énergétiques (méridiens &amp; vaisseaux) et de vos centres neuro-endocriniens.</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">Pour qui ?</p>
+              <p>Ce soin est particulièrement adapté aux personnes souffrant d'un déséquilibre important ou installé (épuisement profond, maladie, étape de vie marquante, traumatisme...). Il propose un accompagnement énergétique complet, en travaillant sur l'ensemble de vos structures énergétiques, afin de réactiver les capacités naturelles d'auto-guérison de votre corps. Il peut agir en parfait soutien d'un traitement médical, afin de traiter le problème dans son ensemble.</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">À quel prix ?</p>
+              <p class="carte-prix-detail">110€</p>
+            </div>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
 
-          <details class="faq-item">
-            <summary>Peut-on cumuler avec un suivi médical ?</summary>
-            <p>Absolument. Le soin énergétique est complémentaire à la médecine
-            conventionnelle, il ne s'y substitue pas. Il agit sur les dimensions
-            subtiles pour soutenir le corps dans son processus naturel.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Comment se préparer à la séance ?</summary>
-            <p>Prévoyez un moment calme d'environ 1h. Installez-vous
-            confortablement — allongé de préférence — dans un endroit où
-            vous ne serez pas dérangé. Avoir un carnet à portée peut être
-            utile pour noter vos ressentis après.</p>
-          </details>
+          <div class="carte">
+            <h3>Soin énergétique animaux</h3>
+            <div class="carte-section">
+              <p class="carte-section-titre">Centres énergétiques nettoyés</p>
+              <p>Nous procédons ici au nettoyage, à l'harmonisation et à la recharge des 7 chakras principaux de votre animal, de ses corps énergétiques, ainsi que de ses différents axes énergétiques (méridiens &amp; vaisseaux).</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">Pour qui ?</p>
+              <p>Ce soin s'adresse aux animaux présentant des signes de déséquilibre, qu'ils soient physiques, émotionnels ou comportementaux (anxiété, fatigue, convalescence...). Il est également indiqué lors de périodes de transition (arrivée dans un nouvel environnement, adoption, séparation, vieillissement). Ce soin peut contribuer à apaiser, rééquilibrer et accompagner l'animal dans son mieux-être global, ainsi qu'à réactiver ses capacités d'auto-guérison, en complément d'un suivi vétérinaire.</p>
+            </div>
+            <div class="carte-section">
+              <p class="carte-section-titre">À quel prix ?</p>
+              <p class="carte-prix-detail">90€</p>
+            </div>
+            <a href="contact.html" class="btn">Réserver</a>
+          </div>
 
         </div>
-      </section>
-
-      <!-- TARIF + CTA -->
-      <section class="soins-tarif">
-        <p class="section-label">Tarif</p>
-        <h2>À partir de 60€</h2>
-        <p>
-          Séances 100% à distance, par téléphone ou visio.
-          Compte-rendu écrit inclus. Réponse sous 48h.
-        </p>
-        <a href="contact.html" class="btn btn-clair">Réserver maintenant</a>
       </section>
 
     </main>

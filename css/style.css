@@ -643,6 +643,83 @@ nav > ul > li > a:hover::before {
   line-height: 2;
 }
 
+/* Bloc bleu unique à trois colonnes (page soins) */
+.soins-bloc-unique {
+  max-width: 1240px;
+  display: flex;
+  align-items: stretch;
+  padding: 56px 52px;
+  text-align: left;
+}
+
+.soins-colonne {
+  flex: 1 1 0;
+  padding: 0 38px;
+}
+
+.soins-colonne:first-child {
+  padding-left: 0;
+}
+
+.soins-colonne:last-child {
+  padding-right: 0;
+}
+
+.soins-separateur {
+  flex: 0 0 1px;
+  align-self: stretch;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.carte-creme-titre-top {
+  font-family: var(--font-serif);
+  color: var(--blanc);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  min-height: 2.5em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.soins-colonne .prestation-description {
+  text-align: justify;
+}
+
+.carte-creme .prestation-description + .prestation-description {
+  margin-top: 20px;
+}
+
+/* Empilement des colonnes sur écrans étroits */
+@media (max-width: 980px) {
+  .prestation-intro {
+    padding: 60px 30px 30px;
+  }
+
+  .soins-bloc-unique {
+    flex-direction: column;
+    max-width: 780px;
+    padding: 48px 40px;
+  }
+
+  .soins-colonne {
+    padding: 0;
+  }
+
+  .soins-separateur {
+    width: 66%;
+    height: 1px;
+    align-self: center;
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.45);
+  }
+}
+
 .prestation-intro h1 {
   font-family: var(--font-serif);
   font-size: 44px;
@@ -1434,6 +1511,10 @@ footer {
 
   .carte-creme h1 {
     font-size: 34px;
+  }
+
+  .carte-creme-titre-top {
+    font-size: 27px;
   }
 
   /* PRESTATION FAQ */
