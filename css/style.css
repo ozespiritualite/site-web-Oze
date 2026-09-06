@@ -1769,6 +1769,7 @@ footer {
   color: var(--texte-clair);
   line-height: 1.9;
   margin-bottom: 22px;
+  text-align: justify;
 }
 
 .article-contenu ul {
@@ -1781,6 +1782,7 @@ footer {
 
 .article-contenu li {
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .article-contenu strong {
@@ -1793,6 +1795,88 @@ footer {
   margin-top: 60px;
   padding-top: 50px;
   border-top: 1px solid rgba(123, 163, 184, 0.3);
+}
+
+.article-contenu h3 {
+  font-family: 'Georgia', serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--texte);
+  margin: 32px 0 12px;
+}
+
+.article-contenu ol {
+  margin: 0 0 22px 22px;
+  padding-left: 8px;
+  color: var(--texte-clair);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.article-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+}
+
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.article-table th,
+.article-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(123, 163, 184, 0.3);
+  text-align: left;
+}
+
+.article-table th {
+  background-color: var(--creme);
+  color: var(--texte);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.article-note {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--texte-clair);
+  opacity: 0.8;
+}
+
+.article-signature {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--bleu);
+  margin-top: 40px;
+}
+
+.article-teaser {
+  font-size: 15px;
+  color: var(--texte-clair);
+  background-color: var(--creme);
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.article-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog-intro {
+  font-size: 16px;
+  color: var(--texte-clair);
+  max-width: 550px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
 }
 
 /* ===== BLOG — RESPONSIVE ===== */
@@ -1829,4 +1913,10 @@ footer {
   .article-contenu h2 {
     font-size: 25px;
   }
+}
+
+.titre-souligne {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
 }
