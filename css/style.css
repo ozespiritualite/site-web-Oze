@@ -1660,7 +1660,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  text-align: left;
+  text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -1705,7 +1705,7 @@ footer {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--blanc);
-  align-self: flex-start;
+  align-self: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 4px;
   margin-top: 8px;
@@ -1919,4 +1919,10 @@ footer {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 8px;
+}
+
+.article-contenu p a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
